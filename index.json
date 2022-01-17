@@ -121,7 +121,7 @@
         "@typescript-eslint/no-unused-vars": "off",
         "unused-imports/no-unused-imports": "error",
         "eqeqeq": "error",
-        "func-names": "error",
+        "func-names": ["error", "never"],
         "func-style": [
             "error",
             "declaration",
