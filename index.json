@@ -20,11 +20,28 @@
             "error",
             "tab"
         ],
-        "quotes": [2, "single", { "avoidEscape": true }],
-        "object-curly-spacing": ["error", "always"],
-        "space-in-parens": ["error", "never"],
-        "curly": [2, "all"],
-        "brace-style": ["error"],
+        "quotes": [
+            2,
+            "single",
+            {
+                "avoidEscape": true
+            }
+        ],
+        "object-curly-spacing": [
+            "error",
+            "always"
+        ],
+        "space-in-parens": [
+            "error",
+            "never"
+        ],
+        "curly": [
+            2,
+            "all"
+        ],
+        "brace-style": [
+            "error"
+        ],
         "linebreak-style": [
             "error",
             "unix"
@@ -48,6 +65,9 @@
                         "after": false
                     },
                     "while": {
+                        "after": false
+                    },
+                    "catch": {
                         "after": false
                     }
                 }
@@ -90,6 +110,68 @@
             }
         ],
         "@typescript-eslint/no-unused-vars": "off",
-        "unused-imports/no-unused-imports": "error"
+        "unused-imports/no-unused-imports": "error",
+        "eqeqeq": "error",
+        "func-names": "error",
+        "func-style": [
+            "error",
+            "declaration",
+            {
+                "allowArrowFunctions": true
+            }
+        ],
+        "prefer-const": "error",
+        "prefer-arrow-callback": "error",
+        "arrow-spacing": [
+            "error"
+        ],
+        "implicit-arrow-linebreak": [
+            "error",
+            "beside"
+        ],
+        "no-multiple-empty-lines": "error",
+        "space-before-blocks": "error",
+        "comma-spacing": "error",
+        "react/no-typos": "error",
+        "react/self-closing-comp": "error",
+        "react/jsx-closing-tag-location": "error",
+        "react/jsx-equals-spacing": [
+            "error",
+            "never"
+        ],
+        "react/jsx-tag-spacing": [
+            "error",
+            {
+                "closingSlash": "never"
+            }
+        ],
+        "react/display-name": "off",
+        "no-unused-vars": "off",
+        "react/prop-types": "off",
+        "react/jsx-curly-newline": [
+            "error",
+            {
+                "multiline": "require",
+                "singleline": "forbid"
+            }
+        ],
+        "react/jsx-first-prop-new-line": [
+            "error",
+            "multiline"
+        ],
+        "react/jsx-max-props-per-line": "error",
+        "react/jsx-one-expression-per-line": "error",
+        "react/jsx-wrap-multilines": [
+            "error",
+            {
+                "declaration": "parens-new-line",
+                "assignment": "parens-new-line",
+                "return": "parens-new-line",
+                "arrow": "parens-new-line",
+                "condition": "parens-new-line",
+                "logical": "parens-new-line",
+                "prop": "ignore"
+            }
+        ]
     }
 }
