@@ -10,7 +10,7 @@
 		"eslint-plugin-react": "^7.26.1"
 	},
 	"peerDependencies": {
-	  "eslint": ">=7",
+	  "eslint": "*",
 	  "typescript": ">=4"
 	}
 }
