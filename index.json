@@ -3,15 +3,24 @@
         "browser": true,
         "es2020": true
     },
-    "extends": [],
+    "extends": [
+        "plugin:react/recommended"
+    ],
     "parser": "@typescript-eslint/parser",
-    "settings": {},
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
     "parserOptions": {
         "sourceType": "module"
     },
+    
     "plugins": [
         "@typescript-eslint",
+        "react",
         "simple-import-sort",
+        "eslint-plugin-react",
         "unused-imports"
     ],
     "ignorePatterns": [],
