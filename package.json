@@ -5,12 +5,15 @@
 	"dependencies": {
 		"@typescript-eslint/eslint-plugin": "^4.33.0",
 		"@typescript-eslint/parser": "^4.33.0",
+		"eslint-plugin-react": "^7.26.1",
 		"eslint-plugin-simple-import-sort": "^7.0.0",
-		"eslint-plugin-unused-imports": "^1.1.5",
-		"eslint-plugin-react": "^7.26.1"
+		"eslint-plugin-unused-imports": "^1.1.5"
 	},
 	"peerDependencies": {
-	  "eslint": "*",
-	  "typescript": ">=4"
+		"eslint": "*",
+		"typescript": ">=4"
+	},
+	"devDependencies": {
+		"typescript": "^4.5.5"
 	}
 }
