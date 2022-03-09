@@ -144,6 +144,7 @@
         "space-before-blocks": "error",
         "comma-spacing": "error",
         "react/no-typos": "error",
+        "react/react-in-jsx-scope": "off",
         "react/self-closing-comp": "error",
         "react/jsx-closing-tag-location": "error",
         "react/jsx-equals-spacing": [
