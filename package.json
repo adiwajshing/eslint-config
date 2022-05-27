@@ -3,11 +3,11 @@
 	"version": "1.0.0",
 	"main": "index.json",
 	"dependencies": {
-		"@typescript-eslint/eslint-plugin": "^4.33.0",
-		"@typescript-eslint/parser": "^4.33.0",
-		"eslint-plugin-react": "^7.26.1",
+		"@typescript-eslint/eslint-plugin": "^5.26.0",
+		"@typescript-eslint/parser": "^5.26.0",
+		"eslint-plugin-react": "^7.30.0",
 		"eslint-plugin-simple-import-sort": "^7.0.0",
-		"eslint-plugin-unused-imports": "^1.1.5"
+		"eslint-plugin-unused-imports": "^2.0.0"
 	},
 	"peerDependencies": {
 		"eslint": "*",
