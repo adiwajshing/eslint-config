@@ -24,6 +24,7 @@
     ],
     "ignorePatterns": [],
     "rules": {
+        "no-constant-condition": ["error"],
         "no-constant-binary-expression": "error",
         "no-trailing-spaces": "error",
         "no-multi-spaces": "error",
@@ -121,7 +122,6 @@
                 ]
             }
         ],
-        "@typescript-eslint/no-unused-vars": "off",
         "unused-imports/no-unused-imports": "error",
         "eqeqeq": "error",
         "func-names": ["error", "never"],
@@ -159,7 +159,7 @@
             }
         ],
         "react/display-name": "off",
-        "no-unused-vars": "off",
+        "no-unused-vars": "error",
         "react/prop-types": "off",
         "react/jsx-curly-newline": [
             "error",
