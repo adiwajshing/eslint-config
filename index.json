@@ -25,6 +25,20 @@
     "ignorePatterns": [],
     "rules": {
         "@typescript-eslint/no-explicit-any": ["error", { "ignoreRestArgs": true }],
+        "@typescript-eslint/type-annotation-spacing": ["error"],
+        "@typescript-eslint/member-delimiter-style": [
+            "error",
+            {
+                "multiline": {
+                    "delimiter": "none",
+                    "requireLast": false
+                },
+                "singleline": {
+                    "delimiter": "comma",
+                    "requireLast": false
+                }
+            }
+        ],
         "no-restricted-syntax": [
             "error",
             {
@@ -112,25 +126,6 @@
                 "next": "block-like"
             }
         ],
-        "simple-import-sort/imports": [
-            "error",
-            {
-                "groups": [
-                    [
-                        "^react",
-                        "^@?\\w",
-                        "^(components|modules|utils)(/.*|$)",
-                        "^\\u0000",
-                        "^\\.\\.(?!/?$)",
-                        "^\\.\\./?$",
-                        "^\\./(?=.*/)(?!/?$)",
-                        "^\\.(?!/?$)",
-                        "^\\./?$"
-                    ]
-                ]
-            }
-        ],
-        "unused-imports/no-unused-imports": "error",
         "eqeqeq": "error",
         "func-names": ["error", "never"],
         "func-style": [
@@ -152,6 +147,27 @@
         "no-multiple-empty-lines": "error",
         "space-before-blocks": "error",
         "comma-spacing": "error",
+        "no-unused-vars": "error",
+
+        "simple-import-sort/imports": [
+            "error",
+            {
+                "groups": [
+                    [
+                        "^react",
+                        "^@?\\w",
+                        "^(components|modules|utils)(/.*|$)",
+                        "^\\u0000",
+                        "^\\.\\.(?!/?$)",
+                        "^\\.\\./?$",
+                        "^\\./(?=.*/)(?!/?$)",
+                        "^\\.(?!/?$)",
+                        "^\\./?$"
+                    ]
+                ]
+            }
+        ],
+        "unused-imports/no-unused-imports": "error",
         "react/no-typos": "error",
         "react/react-in-jsx-scope": "off",
         "react/self-closing-comp": "error",
@@ -167,8 +183,8 @@
             }
         ],
         "react/display-name": "off",
-        "no-unused-vars": "error",
         "react/prop-types": "off",
+        "react/jsx-indent": ["error", "tab"],
         "react/jsx-curly-newline": [
             "error",
             {
