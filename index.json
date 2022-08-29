@@ -24,8 +24,18 @@
     ],
     "ignorePatterns": [],
     "rules": {
-        "@typescript-eslint/no-explicit-any": ["error", { "ignoreRestArgs": true }],
-        "@typescript-eslint/type-annotation-spacing": ["error"],
+        "@typescript-eslint/prefer-optional-chain": [
+            "error"
+        ],
+        "@typescript-eslint/no-explicit-any": [
+            "error",
+            {
+                "ignoreRestArgs": true
+            }
+        ],
+        "@typescript-eslint/type-annotation-spacing": [
+            "error"
+        ],
         "@typescript-eslint/member-delimiter-style": [
             "error",
             {
@@ -39,14 +49,26 @@
                 }
             }
         ],
+        "camelcase": [
+            "error",
+            {
+                "ignoreGlobals": true,
+                "ignoreImports": true
+            }
+        ],
+        "no-unneeded-ternary": [
+            "error"
+        ],
         "no-restricted-syntax": [
             "error",
             {
-              "selector": "TSEnumDeclaration",
-              "message": "Don't declare enums, use literals instead"
+                "selector": "TSEnumDeclaration",
+                "message": "Don't declare enums, use literals instead"
             }
         ],
-        "no-constant-condition": ["error"],
+        "no-constant-condition": [
+            "error"
+        ],
         "no-constant-binary-expression": "error",
         "no-trailing-spaces": "error",
         "no-multi-spaces": "error",
@@ -127,7 +149,10 @@
             }
         ],
         "eqeqeq": "error",
-        "func-names": ["error", "never"],
+        "func-names": [
+            "error",
+            "never"
+        ],
         "func-style": [
             "error",
             "declaration",
@@ -148,7 +173,7 @@
         "space-before-blocks": "error",
         "comma-spacing": "error",
         "no-unused-vars": "error",
-
+        "jsx-quotes": ["error", "prefer-single"],
         "simple-import-sort/imports": [
             "error",
             {
@@ -168,6 +193,13 @@
             }
         ],
         "unused-imports/no-unused-imports": "error",
+        "react/jsx-curly-brace-presence": [
+            "error",
+            {
+                "props": "never",
+                "children": "never"
+            }
+        ],
         "react/no-typos": "error",
         "react/react-in-jsx-scope": "off",
         "react/self-closing-comp": "error",
@@ -184,7 +216,10 @@
         ],
         "react/display-name": "off",
         "react/prop-types": "off",
-        "react/jsx-indent": ["error", "tab"],
+        "react/jsx-indent": [
+            "error",
+            "tab"
+        ],
         "react/jsx-curly-newline": [
             "error",
             {
