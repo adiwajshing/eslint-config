@@ -6,8 +6,7 @@
 		"@typescript-eslint/eslint-plugin": "^5.33.1",
 		"@typescript-eslint/parser": "^5.33.1",
 		"eslint-plugin-react": "^7.30.0",
-		"eslint-plugin-simple-import-sort": "^7.0.0",
-		"eslint-plugin-unused-imports": "^2.0.0"
+		"eslint-plugin-simple-import-sort": "^7.0.0"
 	},
 	"peerDependencies": {
 		"eslint": "*",
