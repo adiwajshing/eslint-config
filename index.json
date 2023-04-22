@@ -34,6 +34,9 @@
         "@typescript-eslint/no-redundant-type-constituents": [
             "error"
         ],
+        "@typescript-eslint/no-inferrable-types": [
+            "error"
+        ],
         "@typescript-eslint/no-explicit-any": [
             "warn",
             {
