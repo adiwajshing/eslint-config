@@ -25,8 +25,17 @@
         "@typescript-eslint/prefer-optional-chain": [
             "error"
         ],
+        "@typesscript-eslint/no-unnecessary-type-assertion": [
+            "error"
+        ],
+        "@typescript-eslint/no-unnecessary-type-constraint": [
+            "error"
+        ],
+        "@typescript-eslint/no-redundant-type-constituents": [
+            "error"
+        ],
         "@typescript-eslint/no-explicit-any": [
-            "error",
+            "warn",
             {
                 "ignoreRestArgs": true
             }
