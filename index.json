@@ -22,6 +22,14 @@
     ],
     "ignorePatterns": [],
     "rules": {
+        "@typescript-eslint/no-misused-promises": [
+            "error",
+            {
+              "checksSpreads": true,
+              "checksVoidReturn": false,
+              "checksConditionals": true
+            }
+        ],
         "@typescript-eslint/prefer-optional-chain": [
             "error"
         ],
