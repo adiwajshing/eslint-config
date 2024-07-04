@@ -18,10 +18,24 @@
     "plugins": [
         "@typescript-eslint",
         "react",
-        "simple-import-sort"
+        "simple-import-sort",
+        "eslint-plugin-unicorn"
     ],
     "ignorePatterns": [],
     "rules": {
+        "unicorn/no-array-for-each": ["error"],
+        "unicorn/consistent-function-scoping": [
+            "error",
+            { "checkArrowFunctions": false }
+        ],
+        "unicorn/no-await-expression-member": "error",
+        "unicorn/no-for-loop": "error",
+        "unicorn/no-lonely-if": "error",
+        "unicorn/no-object-as-default-parameter": "error",
+        "unicorn/prefer-array-find": "error",
+        "unicorn/prefer-array-some": "error",
+
+        "max-depth": ["error", 4],
         "@typescript-eslint/no-misused-promises": [
             "error",
             {
