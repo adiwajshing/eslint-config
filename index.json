@@ -1,7 +1,8 @@
 {
     "env": {
         "browser": true,
-        "es2020": true
+        "es2020": true,
+        "jest/globals": true
     },
     "extends": [
         "plugin:react/recommended"
@@ -19,7 +20,8 @@
         "@typescript-eslint",
         "react",
         "simple-import-sort",
-        "eslint-plugin-unicorn"
+        "eslint-plugin-unicorn",
+        "jest"
     ],
     "ignorePatterns": [],
     "rules": {
@@ -281,6 +283,8 @@
                 "logical": "parens-new-line",
                 "prop": "ignore"
             }
-        ]
+        ],
+        "jest/no-disabled-tests": "error",
+        "jest/no-focused-tests": "error"
     }
 }
