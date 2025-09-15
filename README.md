@@ -7,9 +7,17 @@ To use in your project:
 yarn add git+https://github.com/adiwajshing/eslint-config
 ```
 
-Then create an `.eslintrc.json` like (can also be a yaml or js):
-``` json
+Then create an `eslint.config.mjs` like (can also be a yaml or js):
+``` js
 {
-	"extends": "@adiwajshing"
+import { defineConfig } from "eslint/config";
+import config from "@adiwajshing/eslint-config";
+
+export default defineConfig([
+	{
+		extends: [config],
+	},
+]);
+
 }
 ```
