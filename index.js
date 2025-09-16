@@ -1,4 +1,3 @@
-import { defineConfig } from "eslint/config";
 import typescriptEslint from "@typescript-eslint/eslint-plugin";
 import react from "eslint-plugin-react";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
@@ -6,26 +5,13 @@ import unicorn from "eslint-plugin-unicorn";
 import jest from "eslint-plugin-jest";
 import globals from "globals";
 import tsParser from "@typescript-eslint/parser";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
-import js from "@eslint/js";
-import { FlatCompat } from "@eslint/eslintrc";
 import stylistic from '@stylistic/eslint-plugin'
+import { defineConfig } from "eslint/config";
 
-
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const compat = new FlatCompat({
-    baseDirectory: __dirname,
-    recommendedConfig: js.configs.recommended,
-    allConfig: js.configs.all
-});
-
-export default defineConfig([{
-    files: ["src/**/*.{js,ts,tsx}"],
-    extends: compat.extends("plugin:react/recommended"),
-
+export default defineConfig({
+    extends: [
+        react.configs.flat.recommended,
+    ],
     plugins: {
         "@typescript-eslint": typescriptEslint,
         react,
@@ -45,8 +31,8 @@ export default defineConfig([{
         ecmaVersion: 5,
         sourceType: "module",
         parserOptions: {
-          projectService: true,
-          tsconfigRootDir: import.meta.dirname,
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
         }
     },
 
@@ -241,4 +227,4 @@ export default defineConfig([{
         "jest/no-disabled-tests": "error",
         "jest/no-focused-tests": "error",
     },
-}]);
+});
