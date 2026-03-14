@@ -74,6 +74,7 @@ export default defineConfig({
 		}],
 
 		'@stylistic/type-annotation-spacing': ['error'],
+		'@stylistic/max-len': ['error', { code: 80, tabWidth: 2 }],
 
 		'@stylistic/member-delimiter-style': ['error', {
 			multiline: {
