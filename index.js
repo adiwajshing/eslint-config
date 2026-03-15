@@ -2,7 +2,7 @@ import stylistic from '@stylistic/eslint-plugin'
 import typescriptEslint from '@typescript-eslint/eslint-plugin'
 import tsParser from '@typescript-eslint/parser'
 import { defineConfig } from 'eslint/config'
-import jest from 'eslint-plugin-jest'
+import newlines	from 'eslint-plugin-import-newlines'
 import react from 'eslint-plugin-react'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
 import unicorn from 'eslint-plugin-unicorn'
@@ -17,16 +17,14 @@ export default defineConfig({
 		react,
 		'simple-import-sort': simpleImportSort,
 		unicorn,
-		jest,
 		'@stylistic': stylistic,
+		newlines
 	},
 
 	languageOptions: {
 		globals: {
 			...globals.browser,
-			...jest.environments.globals.globals,
 		},
-
 		parser: tsParser,
 		ecmaVersion: 5,
 		sourceType: 'module',
@@ -224,8 +222,12 @@ export default defineConfig({
 			logical: 'parens-new-line',
 			prop: 'ignore',
 		}],
-
-		'jest/no-disabled-tests': 'error',
-		'jest/no-focused-tests': 'error',
+		'newlines/enforce': [
+			'error',
+			{
+				'max-len': 80,
+				'semi': false
+			}
+		]
 	},
 })
