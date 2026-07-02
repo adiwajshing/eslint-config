@@ -106,7 +106,7 @@ export default defineConfig({
 		'no-trailing-spaces': 'error',
 		'no-multi-spaces': 'error',
 		'space-infix-ops': 'error',
-		indent: ['error', 'tab'],
+		'@stylistic/indent': ['error', 'tab'],
 
 		quotes: [2, 'single', {
 			avoidEscape: true,
@@ -202,7 +202,6 @@ export default defineConfig({
 
 		'react/display-name': 'off',
 		'react/prop-types': 'off',
-		'react/jsx-indent': ['error', 'tab'],
 
 		'react/jsx-curly-newline': ['error', {
 			multiline: 'require',
