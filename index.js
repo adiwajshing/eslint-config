@@ -3,18 +3,13 @@ import typescriptEslint from '@typescript-eslint/eslint-plugin'
 import tsParser from '@typescript-eslint/parser'
 import { defineConfig } from 'eslint/config'
 import newlines	from 'eslint-plugin-import-newlines'
-import react from 'eslint-plugin-react'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
 import unicorn from 'eslint-plugin-unicorn'
 import globals from 'globals'
 
 export default defineConfig({
-	extends: [
-		react.configs.flat.recommended,
-	],
 	plugins: {
 		'@typescript-eslint': typescriptEslint,
-		react,
 		'simple-import-sort': simpleImportSort,
 		unicorn,
 		'@stylistic': stylistic,
@@ -34,14 +29,8 @@ export default defineConfig({
 		}
 	},
 
-	settings: {
-		react: {
-			version: 'detect',
-		},
-	},
-
 	rules: {
-		'unicorn/no-array-for-each': ['error'],
+		'unicorn/no-for-each': ['error'],
 
 		'unicorn/consistent-function-scoping': ['error', {
 			checkArrowFunctions: false,
@@ -103,24 +92,24 @@ export default defineConfig({
 
 		'no-constant-condition': ['error'],
 		'no-constant-binary-expression': 'error',
-		'no-trailing-spaces': 'error',
-		'no-multi-spaces': 'error',
-		'space-infix-ops': 'error',
+		'@stylistic/no-trailing-spaces': 'error',
+		'@stylistic/no-multi-spaces': 'error',
+		'@stylistic/space-infix-ops': 'error',
 		'@stylistic/indent': ['error', 'tab'],
 
-		quotes: [2, 'single', {
+		'@stylistic/quotes': [2, 'single', {
 			avoidEscape: true,
 		}],
 
-		'object-curly-spacing': ['error', 'always'],
-		'space-in-parens': ['error', 'never'],
+		'@stylistic/object-curly-spacing': ['error', 'always'],
+		'@stylistic/space-in-parens': ['error', 'never'],
 		curly: [2, 'all'],
-		'brace-style': ['error'],
-		'linebreak-style': ['error', 'unix'],
-		semi: ['error', 'never'],
-		'space-before-function-paren': ['error', 'never'],
+		'@stylistic/brace-style': ['error'],
+		'@stylistic/linebreak-style': ['error', 'unix'],
+		'@stylistic/semi': ['error', 'never'],
+		'@stylistic/space-before-function-paren': ['error', 'never'],
 
-		'keyword-spacing': ['error', {
+		'@stylistic/keyword-spacing': ['error', {
 			overrides: {
 				if: {
 					after: false,
@@ -140,7 +129,7 @@ export default defineConfig({
 			},
 		}],
 
-		'padding-line-between-statements': ['error', {
+		'@stylistic/padding-line-between-statements': ['error', {
 			blankLine: 'always',
 			prev: 'function',
 			next: '*',
@@ -163,13 +152,13 @@ export default defineConfig({
 
 		'prefer-const': 'error',
 		'prefer-arrow-callback': 'error',
-		'arrow-spacing': ['error'],
-		'implicit-arrow-linebreak': ['error', 'beside'],
-		'no-multiple-empty-lines': 'error',
-		'space-before-blocks': 'error',
-		'comma-spacing': 'error',
+		'@stylistic/arrow-spacing': ['error'],
+		'@stylistic/implicit-arrow-linebreak': ['error', 'beside'],
+		'@stylistic/no-multiple-empty-lines': 'error',
+		'@stylistic/space-before-blocks': 'error',
+		'@stylistic/comma-spacing': 'error',
 		'no-unused-vars': 'off',
-		'jsx-quotes': ['error', 'prefer-single'],
+		'@stylistic/jsx-quotes': ['error', 'prefer-single'],
 
 		'simple-import-sort/imports': ['error', {
 			groups: [[
@@ -185,34 +174,29 @@ export default defineConfig({
 			]],
 		}],
 
-		'react/jsx-curly-brace-presence': ['error', {
+		'@stylistic/jsx-curly-brace-presence': ['error', {
 			props: 'never',
 			children: 'never',
 		}],
 
-		'react/no-typos': 'error',
-		'react/react-in-jsx-scope': 'off',
-		'react/self-closing-comp': 'error',
-		'react/jsx-closing-tag-location': 'error',
-		'react/jsx-equals-spacing': ['error', 'never'],
+		'@stylistic/jsx-self-closing-comp': 'error',
+		'@stylistic/jsx-closing-tag-location': 'error',
+		'@stylistic/jsx-equals-spacing': ['error', 'never'],
 
-		'react/jsx-tag-spacing': ['error', {
+		'@stylistic/jsx-tag-spacing': ['error', {
 			closingSlash: 'never',
 		}],
 
-		'react/display-name': 'off',
-		'react/prop-types': 'off',
-
-		'react/jsx-curly-newline': ['error', {
+		'@stylistic/jsx-curly-newline': ['error', {
 			multiline: 'require',
 			singleline: 'forbid',
 		}],
 
-		'react/jsx-first-prop-new-line': ['error', 'multiline'],
-		'react/jsx-max-props-per-line': 'error',
-		'react/jsx-one-expression-per-line': 'error',
+		'@stylistic/jsx-first-prop-new-line': ['error', 'multiline'],
+		'@stylistic/jsx-max-props-per-line': 'error',
+		'@stylistic/jsx-one-expression-per-line': 'error',
 
-		'react/jsx-wrap-multilines': ['error', {
+		'@stylistic/jsx-wrap-multilines': ['error', {
 			declaration: 'parens-new-line',
 			assignment: 'parens-new-line',
 			return: 'parens-new-line',
